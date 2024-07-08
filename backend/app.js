@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+
+// NOte:1 Service is incomplete 
+// Note:2 Connect to mongodb
+
 // Sample data for example to show it working or not -- by coder Irfan
 let services = [
   { id: 1, name: 'backend', description: 'This is first project' },
