@@ -56,5 +56,9 @@ app.delete('/api/v1/services/:id', function (req, res) {
 });
 var port = 3000;
 app.listen(port, function () {
+<<<<<<< HEAD
     console.log("Server running on port " + port);
+=======
+    console.log("Server running on port ".concat(port));
+>>>>>>> eaa70b487b32b913ae83b5421a8ae76f3ba035b8
 });
