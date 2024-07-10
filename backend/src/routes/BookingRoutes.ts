@@ -8,7 +8,8 @@ import {
 } from "../controllers/bookingControllers";
 
 import { Router } from "express";
-import { protect, admin } from "../middlewares/authMiddleware";
+import { protect } from "../middlewares/authMiddleware";
+import { admin } from "../middlewares/adminMiddleware";
 
 const router = Router();
 
