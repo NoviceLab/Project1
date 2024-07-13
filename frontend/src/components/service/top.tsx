@@ -152,30 +152,34 @@ const Top: React.FC = () => {
         <div className="  min-h-[750px] mt-10 flex flex-wrap justify-evenly gap-6 mx-10 carddd   ">
           <div className="min-w-10 min-h-10">
             <Explore
-              title="Stylish Hat"
-              description="A hat that makes you stand out."
+              title="Conference Rooms"
+              description="Full equipped premium conference rooms for meetings and discussion with the state of the art support."
               imagesrc="https://i0.wp.com/www.gavias-theme.com/wp/codesk/wp-content/uploads/2020/03/price-1.jpg?w=900&ssl=1"
+              price="999"
             />
           </div>
           <div className="min-w-10 min-h-10">
             <Explore
-              title="Stylish Hat"
-              description="A hat that makes you stand out."
+              title="Cabin Spaces"
+              description="On demand premium workspaces with vibrant designs, state of the art technology"
               imagesrc="https://i0.wp.com/www.gavias-theme.com/wp/codesk/wp-content/uploads/2020/03/price-2.jpg?w=900&ssl=1"
+              price="12,999"
             />
           </div>
           <div className="min-w-10 min-h-10">
             <Explore
-              title="Stylish Hat"
-              description="A hat that makes you stand out."
+              title="Dedicated Desk"
+              description="Prestigious office addresses that elevate your business' professional image"
               imagesrc="https://i0.wp.com/www.gavias-theme.com/wp/codesk/wp-content/uploads/2020/03/price-3.jpg?w=900&ssl=1"
+              price="11,999"
             />
           </div>
           <div className="min-w-10 min-h-10">
             <Explore
-              title="Stylish Hat"
-              description="A hat that makes you stand out."
+              title="Hot Desk"
+              description="Premium custom built and operated workspaces"
               imagesrc="https://i0.wp.com/www.gavias-theme.com/wp/codesk/wp-content/uploads/2020/03/price-4.jpg?w=900&ssl=1"
+              price="5,999"
             />
           </div>
         </div>

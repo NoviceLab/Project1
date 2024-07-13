@@ -4,9 +4,15 @@ interface OfferProps {
   title: string;
   description: string;
   imagesrc: string;
+  price: String;
 }
 
-const Explore: React.FC<OfferProps> = ({ title, description, imagesrc }) => {
+const Explore: React.FC<OfferProps> = ({
+  title,
+  description,
+  imagesrc,
+  price,
+}) => {
   return (
     <div className="w-auto max-w-2xl transition-transform duration-300 transform hover:scale-105">
       <div className="card card-side bg-base-100 shadow-xl">
@@ -20,10 +26,7 @@ const Explore: React.FC<OfferProps> = ({ title, description, imagesrc }) => {
             <div className="flex justify-end mr-5">
               <p className="text-1xl mt-4 italic">
                 Starting from{" "}
-                <p className="text-red-700 text-2xl font-semibold">
-                  {" "}
-                  Rs 999 hr
-                </p>
+                <p className="text-red-500 text-2xl font-semibold"> ₹{price}</p>
               </p>
             </div>
             <div
