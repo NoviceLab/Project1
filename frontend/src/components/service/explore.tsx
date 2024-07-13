@@ -14,10 +14,13 @@ const Explore: React.FC<OfferProps> = ({
   price,
 }) => {
   return (
-    <div className="w-auto max-w-2xl transition-transform duration-300 transform hover:scale-105">
-      <div className="card card-side bg-base-100 shadow-xl">
+    <div className="w-auto max-w-[600px] transition-transform duration-300 transform hover:scale-105">
+      <div
+        className="card card-side bg-base-100 shadow-xl   max-h-80
+      "
+      >
         <figure>
-          <img src={imagesrc} alt="Movie" className="h-64  w-96 " />
+          <img src={imagesrc} alt="Movie" className="h-80  min-w-96 " />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-2xl text-bold">{title}</h2>
