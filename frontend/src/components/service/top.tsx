@@ -149,7 +149,7 @@ const Top: React.FC = () => {
           Explore Our Services
         </h1>
 
-        <div className="  min-h-[750px] mt-10 flex flex-wrap justify-evenly gap-6 mx-10 carddd   ">
+        <div className="  min-h-[750px] mt-10 flex flex-wrap justify-evenly gap-6 mx-10 carddd  ">
           <div className="min-w-10 min-h-10">
             <Explore
               title="Conference Rooms"

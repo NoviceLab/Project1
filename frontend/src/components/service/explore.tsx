@@ -25,18 +25,19 @@ const Explore: React.FC<OfferProps> = ({
         <div className="card-body">
           <h2 className="card-title text-2xl text-bold">{title}</h2>
           <p>{description}</p>
-          <div className="card-actions justify-end  flex flex-col ">
-            <div className="flex justify-end mr-5">
-              <p className="text-1xl mt-4 italic">
+          <div className="card-actions min-w-1 max-h-20 flex items-center justify-between      ">
+            <div className="   border-2    ">
+              <p className="text-1xl  italic">
                 Starting from{" "}
                 <p className="text-red-500 text-2xl font-semibold"> ₹{price}</p>
               </p>
             </div>
             <div
-              className="flex justify-end
-             mt-5 "
+              className=" 
+             
+                "
             >
-              <button className="btn btn-primary bg-blue-500 text-white   hover:bg-blue-400">
+              <button className=" btn btn-primary bg-blue-500 text-white   hover:bg-blue-400  ">
                 More
               </button>
             </div>
