@@ -8,10 +8,10 @@ interface OfferProps {
 
 const Explore: React.FC<OfferProps> = ({ title, description, imagesrc }) => {
   return (
-    <div className="w-auto max-w-2xl">
+    <div className="w-auto max-w-2xl transition-transform duration-300 transform hover:scale-105">
       <div className="card card-side bg-base-100 shadow-xl">
         <figure>
-          <img src={imagesrc} alt="Movie" />
+          <img src={imagesrc} alt="Movie" className="h-64  w-96 " />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-2xl text-bold">{title}</h2>
@@ -30,7 +30,7 @@ const Explore: React.FC<OfferProps> = ({ title, description, imagesrc }) => {
               className="flex justify-end
              mt-5 "
             >
-              <button className="btn btn-primary bg-blue-500 text-white w-[50%] h-[40px] hover:bg-blue-400">
+              <button className="btn btn-primary bg-blue-500 text-white   hover:bg-blue-400">
                 More
               </button>
             </div>
