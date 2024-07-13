@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Convergence&family=Noto+Color+Emoji&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .glass {
   background: rgba(255, 255, 255, 0.1);
@@ -7,12 +10,11 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@tailwind base;
+html,
+body,@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
 #root {
   margin: 0%;
   padding: 0%;
@@ -20,3 +22,41 @@ body,
   width: 100%;
 }
 
+
+/* .glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+} */
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.carddd {
+  backdrop-filter: blur(14px) saturate(103%);
+  -webkit-backdrop-filter: blur(14px) saturate(103%);
+  background-color: rgba(17, 25, 40, 0.07);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
