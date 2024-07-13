@@ -1,18 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Convergence&family=Noto+Color+Emoji&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import "tailwindcss/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 html,
-body,
+body,@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   margin: 0%;
   padding: 0%;
   height: 100%;
   width: 100%;
 }
-@import "tailwindcss/tailwind.css";
+
 
 /* .glass {
   background: rgba(255, 255, 255, 0.1);
