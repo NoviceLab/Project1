@@ -26,7 +26,7 @@ const Explore: React.FC<OfferProps> = ({
           <h2 className="card-title text-2xl text-bold">{title}</h2>
           <p>{description}</p>
           <div className="card-actions min-w-1 max-h-20 flex items-center justify-between      ">
-            <div className="   border-2    ">
+            <div className="      ">
               <p className="text-1xl  italic">
                 Starting from{" "}
                 <p className="text-red-500 text-2xl font-semibold"> ₹{price}</p>
