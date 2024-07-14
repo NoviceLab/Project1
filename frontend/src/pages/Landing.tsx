@@ -23,11 +23,13 @@ import Yellowline from "../components/Landing/Yellowline";
 import PhotoGallery from "../components/Landing/PhotoGallery";
 import Review from "../components/Landing/Review";
 import Random from "../components/Landing/Random";
+import Navbar from "../components/Navbar/navbar";
+import Footer from "../components/Footer/footer";
 
 function Landing() {
   return (
     <div className="h-screen w-screen">
-      <div>Navbar</div>
+      <div><Navbar /></div>
       <div className="flex flex-col h-[60%] md:h-[73%] lg:h-[83%] justify-center bg-black">
         <h1 className="border-l-2 border-yellow-400 text-white pl-3 m-6">
           <span className="flex flex-row">
@@ -338,6 +340,7 @@ function Landing() {
           balance.
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

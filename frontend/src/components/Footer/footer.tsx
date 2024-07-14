@@ -2,7 +2,7 @@ import { IoIosCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className="  ">
       <footer className="footer bg-stone-800 text-neutral-content p-10">
@@ -114,4 +114,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
