@@ -11,10 +11,7 @@
 }
 
 html,
-body,@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+body,
 #root {
   margin: 0%;
   padding: 0%;
