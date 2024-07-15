@@ -1,7 +1,7 @@
 import { IoIosCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="  ">
@@ -38,9 +38,18 @@ const Footer = () => {
         </aside>
         <section>
           <h1 className="text-lg font-bold">Company</h1>
-          <p> About us</p>
-          <p> Location</p>
-          <p> Our service </p>
+          <Link to="/about-us">
+            {" "}
+            <p> About us</p>
+          </Link>
+          <Link to="/location">
+            <p>Location </p>
+          </Link>
+          <Link to="/service">
+            {" "}
+            <p> Our service </p>
+          </Link>
+
           <p> Managed Office Service</p>
           <p> Contact us</p>
         </section>
@@ -51,7 +60,11 @@ const Footer = () => {
           <p> Gallery </p>
           <p>Referrals</p>
           <p>FAQ</p>
-          <p>SigUp</p>
+          <Link to="/register">
+            {" "}
+            <p>SigUp</p>
+          </Link>
+
           <p>Site map</p>
           <p>Partner with us </p>
           <p>Events</p>
