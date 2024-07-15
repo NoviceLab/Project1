@@ -31,5 +31,6 @@
 ## Contacts
 - For any doubts, contact @admins.
 
-## Assigned Tasks
-- All assigned tasks are listed [here](https://dark-brochure-abd.notion.site/Coworking-Space-970a326fd1d94c0a8d4a71b4f7886045?pvs=4).
+## Remainig Tasks
+- mail verification
+- Notification

@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -76,10 +75,10 @@ const ContactUs = () => {
                         </div>
                         <div>
                             <label className="block text-gray-700 font-bold mb-2" htmlFor="specifications">Specifications</label>
-                            <textarea className="w-full px-3 py-2 border rounded-lg" id="specifications" name="specifications" rows="4"></textarea>
+                            <textarea className="w-full px-3 py-2 border rounded-lg" id="specifications" name="specifications" rows={4} ></textarea>
                         </div>
                         <div className="text-center">
-                            <button className="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700" type="submit">Submit</button>
+                            <button className="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700" type="submit" >Submit</button>
                         </div>
                     </form>
                 </div>

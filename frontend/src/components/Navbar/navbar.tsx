@@ -81,10 +81,16 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex mr-28 ">
           <ul className="menu menu-horizontal px-1  ">
             <li>
-              <a>Home</a>
+              <Link to={"/"}>
+                {" "}
+                <a>Home</a>
+              </Link>
             </li>
             <li>
-              <a>About Us</a>
+              <Link to="/about-us">
+                {" "}
+                <a>About Us</a>
+              </Link>
             </li>
 
             <li>
@@ -101,7 +107,10 @@ const Navbar = () => {
               </details>
             </li>
             <li>
-              <a>Services</a>
+              <Link to="/service">
+                {" "}
+                <a>Services</a>
+              </Link>
             </li>
             <li>
               <details>
@@ -125,7 +134,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-5">
-          <a className="btn rounded-2xl w-28  ">Login</a>
+          <Link to="/login">
+            {" "}
+            <a className="btn rounded-2xl w-28  ">Login</a>{" "}
+          </Link>
 
           <a className="btn bg-yellow-500 rounded-3xl">
             {" "}

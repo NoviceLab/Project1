@@ -5,7 +5,7 @@ import { createuser, deleteuser, getusers, updateuser, userbyid } from "../contr
 
 const router = Router()
 
-router.post("/",protect,createuser);
+router.post("/",createuser);
 router.get("/",protect,admin,getusers);
 router.get("/:id",protect,userbyid);
 router.delete("/:id",protect,admin,deleteuser);
