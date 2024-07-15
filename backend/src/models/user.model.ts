@@ -7,6 +7,7 @@ interface UsersInterface extends Document {
     password: string;
     phone?: string;
     role: 'admin' | 'user';
+    kyc: "false" | "true";
     coins?: number;
     createdAt?: Date;
 }
@@ -16,7 +17,8 @@ const usersSchema: Schema = new Schema<UsersInterface>({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     phone: { type: String },
-    role: { type: String, enum: ['admin', 'user'], default: 'user' },
+    role: { type: String, enum: ["admin", "user"], default: "user" },
+    kyc: {type: String, enum: ["false","true"], default: "false"},
     coins: { type: Number, default: 0 },
     createdAt: { type: Date, default: Date.now }
 });

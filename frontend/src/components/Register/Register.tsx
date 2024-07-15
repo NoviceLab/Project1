@@ -1,25 +1,56 @@
+import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
 function Register() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (password != confirmPassword) {
       toast.error("Passwords do not match");
       return;
+    }else{
+      const data = {
+        name: name,
+        email: email,
+        password: password,
+        phone: phone,
+      }
+      try{
+        const response = await axios.post("http://localhost:3000/api/v1/users/",data);
+        if(response.data.msg == "Invalid Inputs"){
+          toast.error("Invalid Inputs!")
+          return;
+        }
+        if(response.data.msg == "Username exsists"){
+          toast.error("This username already exsists")
+          return;
+        }
+        if(response.data.msg == "Email Exsists"){
+          toast.error("account with this email already exsists")
+        }
+        if(response.data.msg == "user created"){
+          toast.success("User created")
+          const token = response.data.jwt
+          localStorage.setItem("token",token);
+          const user = response.data.user
+          localStorage.setItem("user",user)
+          navigate("/dashboard");
+        }
+      }catch(e){
+        toast.error("Some error occoured");
+      }
+
     }
-    // Handle register logic here
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Username:", username);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
-  };
+    
+  }
 
   return (
     <div className="container mx-auto p-4">
@@ -27,13 +58,13 @@ function Register() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
-            Name *
+            Username *
           </label>
           <input
             type="text"
             id="name"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter your name"
+            placeholder="Enter your Username"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -58,15 +89,15 @@ function Register() {
             htmlFor="username"
             className="block text-gray-700 font-bold mb-2"
           >
-            Username *
+            Phone No. *
           </label>
           <input
             type="text"
-            id="username"
+            id="Phone No."
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter your Phone no."
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             required
           />
         </div>
