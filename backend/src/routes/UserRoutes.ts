@@ -7,7 +7,7 @@ const router = Router()
 
 router.post("/",createuser);
 router.get("/",protect,admin,getusers);
-router.get("/:id",protect,userbyid);
+router.get("/:id",userbyid);
 router.delete("/:id",protect,admin,deleteuser);
 router.put("/:id",protect,admin,updateuser);
 

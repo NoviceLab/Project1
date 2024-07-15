@@ -20,7 +20,7 @@ export const login = async (req: Request, res: Response) => {
         });
       }
       if (body.password == user.password) {
-        const token = jwt.sign({ email: user.name }, "jwtsecret"); //sending jwt make it store in localstorage in frontend
+        const token = jwt.sign({ name: user.name }, "jwtsecret"); //sending jwt make it store in localstorage in frontend
         res.status(200).json({
           msg: "user signed in",
           jwt: token,

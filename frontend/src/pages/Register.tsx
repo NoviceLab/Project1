@@ -8,8 +8,6 @@ function SignUp(){
     <div className="h-screen w-screen">
       <div><Navbar /></div>
       <div><Register /></div>
-     
-     
       <Footer />
     </div>
     </>

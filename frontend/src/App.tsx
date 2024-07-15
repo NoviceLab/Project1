@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import LogIn from "./pages/LogIn";
 import Register from "./pages/Register";
 import { Toaster } from "react-hot-toast";
+import Dashboard from "./pages/Dashboard";
 // import Location from "./pages/Location";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/about-us" element={<AboutUs />} />
         {/* <Route path="/location" element={<Location />} /> */}
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/service" element={<OurServicesPage />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/Register" element={<Register />} />

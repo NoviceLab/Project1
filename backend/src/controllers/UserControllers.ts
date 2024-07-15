@@ -1,6 +1,8 @@
 import { Request,Response } from "express";
 import { UserModel } from "../models/user.model";
 import { createuserInputs } from "../zodTypes/types";
+import { kycmodel } from "../models/kyc.model";
+import jwt from "jsonwebtoken";
 
 
 // creates a user
@@ -9,21 +11,37 @@ export const createuser = async(req:Request,res:Response) =>{
     const validate = await createuserInputs.safeParse(body);
     try{
         if(!validate.success){
-            res.json({
+            return res.json({
                 msg: "Invalid Inputs",
             })
         }else{
-            await UserModel.create({
+            const Unalready = await UserModel.findOne({name: body.name});
+            if(Unalready){
+                return res.json({
+                    msg: "Username exsists"
+                })
+            }
+            const Ealready = await UserModel.findOne({email: body.email});
+            if(Ealready){
+                return res.json({
+                    msg: "Email Exsists"
+                })
+            }
+            const data = await UserModel.create({
                 name: body.name,
                 email: body.email,
                 password: body.password,
                 phone: body.phone,
                 role: "user",
+                kyc: "false",
                 coins: 0,
                 createdAt: Date.now(),
             })
+            const token = await jwt.sign({name: data.name},"jwtsecret");
             return res.json({
-                msg: "user created"
+                msg: "user created",
+                jwt: token,
+                user: body.name
             })
         }
     }catch(e){
@@ -107,3 +125,36 @@ export const updateuser = async(req:Request,res:Response)=>{
     })  
     }
 }
+
+export const dokyc = async (req:Request,res:Response) => {
+    const body = await req.body
+    try{
+        await kycmodel.create({
+            user: body.user,
+            firstname: body.firstname,
+            lastname: body.lastname,
+            phone: body.phone,
+            address: body.address,
+            pancard: body.pancard,
+            aadhar: body.aadhar,
+            companyname: body.companyname
+        });
+        await UserModel.findOneAndUpdate({name: body.user},{
+            kyc: "true"
+        })
+        res.json({
+            msg: "kyc Completed"
+        })
+    }catch(e){
+        res.json({
+            msg: e
+        });
+    }
+}
+
+// export const userkyc = async(req:Request,res:Response)=>{
+//    const body = req.body;
+//    try{
+
+//    }
+// }

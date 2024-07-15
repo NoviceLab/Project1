@@ -4,7 +4,7 @@ function LogIn() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle login logic here
     console.log('Username:', username);

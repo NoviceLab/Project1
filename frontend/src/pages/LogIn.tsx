@@ -12,7 +12,6 @@ function SignIn() {
         <div>
           <LogIn />{" "}
         </div>
-
         <Footer />
       </div>
     </>
