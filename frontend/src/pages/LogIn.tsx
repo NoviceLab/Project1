@@ -1,19 +1,22 @@
-import Footer from "../components/Footer/footer"
-import Navbar from "../components/Navbar/navbar"
-import LogIn from "../components/LogIn/LogIn"
+import Footer from "../components/Footer/footer";
+import Navbar from "../components/Navbar/navbar";
+import LogIn from "../components/LogIn/LogIn";
 
-function SignIn(){
+function SignIn() {
   return (
     <>
-    <div className="h-screen w-screen">
-      <div><Navbar /></div>
-      <div><LogIn /></div>
-     
-     
-      <Footer />
-    </div>
+      <div className="h-screen w-screen">
+        <div>
+          <Navbar />{" "}
+        </div>
+        <div>
+          <LogIn />{" "}
+        </div>
+
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
-export default SignIn
+export default SignIn;
