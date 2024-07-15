@@ -1,6 +1,6 @@
 import Footer from "../components/Footer/footer"
 import Navbar from "../components/Navbar/navbar"
-import Register from "../components/SignUp/SignUp"
+import Register from "../components/Register/Register"
 
 function SignUp(){
   return (
