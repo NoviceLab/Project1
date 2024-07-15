@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 function SignUp() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle register logic here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Username:', username);
-    console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
+    if (password != confirmPassword) {
+      toast.error("Password do not match");
+      console.log("hello");
+      return;
+    }
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Username:", username);
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
   };
 
   return (
@@ -50,7 +55,10 @@ function SignUp() {
           />
         </div>
         <div>
-          <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
+          <label
+            htmlFor="username"
+            className="block text-gray-700 font-bold mb-2"
+          >
             Username *
           </label>
           <input
@@ -64,7 +72,10 @@ function SignUp() {
           />
         </div>
         <div>
-          <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
+          <label
+            htmlFor="password"
+            className="block text-gray-700 font-bold mb-2"
+          >
             Password *
           </label>
           <input
@@ -78,7 +89,10 @@ function SignUp() {
           />
         </div>
         <div>
-          <label htmlFor="confirmPassword" className="block text-gray-700 font-bold mb-2">
+          <label
+            htmlFor="confirmPassword"
+            className="block text-gray-700 font-bold mb-2"
+          >
             Confirm Password *
           </label>
           <input
