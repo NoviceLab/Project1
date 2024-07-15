@@ -1,6 +1,6 @@
 import Footer from "../components/Footer/footer"
 import Navbar from "../components/Navbar/navbar"
-import LogIn from "../components/SignIn/SignIn"
+import LogIn from "../components/LogIn/LogIn"
 
 function SignIn(){
   return (
