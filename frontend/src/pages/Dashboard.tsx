@@ -6,12 +6,12 @@ import { MdHistory } from "react-icons/md"
 import Avatar from "../components/Dashboard/Avatar"
 
 function Dashboard() {
-    const id = localStorage.getItem("user");
+    const id = localStorage.getItem("user") || "";
     const [coins,setCoins] = useState("0");
     const navigate = useNavigate()
     function logout(){
-        localStorage.clear()
-        navigate("/login")
+      localStorage.clear()
+      navigate("/login")
     }
     async function userinfo(){
         const response = await axios.get(`http://localhost:3000/api/v1/users/${id}`);
@@ -31,7 +31,7 @@ function Dashboard() {
                 <div className="flex mx-3 items-center"><div className="mx-1 bg-slate-200 rounded-2xl px-1">Coins:{coins}</div><div className="text-2xl cursor-pointer">+</div></div>
                 <div className="mx-4 text-2xl cursor-pointer" onClick={()=>{navigate("/transactions")}}><MdHistory/></div>
                 <div className="mx-4 cursor-pointer" onClick={logout}>logout</div>
-                <div className="mx-4"><Avatar name="fsf"/></div>
+                <div className="mx-4"><Avatar name={id}/></div>
             </div>
         </div>
         <div className="w-full bg-green-400">
