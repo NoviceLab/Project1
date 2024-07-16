@@ -1,14 +1,45 @@
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function LogIn() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async(event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle login logic here
-    console.log('Username:', username);
-    console.log('Password:', password);
+    const data = {
+      email: username,
+      password: password
+    }
+    try{
+      const response = await axios.post("http://localhost:3000/api/v1/auth/login",data);
+      const msg = response.data.msg;
+      if(msg == "Invalid Inputs"){
+        toast.error("Password must be min. 8 letters");
+        return;
+      }
+      if(msg == "User not found with this email"){
+        toast.error("No User with this email Found");
+        return;
+      }
+      if(msg == "Invalid password"){
+        toast.error("Wrong password!");
+        return;
+      }
+      if(msg == "user signed in"){
+        toast.success("User logged in");
+        const token = response.data.jwt;
+        localStorage.setItem("token",token);
+        const user = response.data.user;
+        localStorage.setItem("user",user)
+        navigate("/dashboard");
+      }
+    }catch(e){
+      toast.error("Some Error Occoured");
+    }
   };
 
   return (
@@ -17,13 +48,13 @@ function LogIn() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
-            Username or Email Address *
+            Email Address *
           </label>
           <input
-            type="text"
+            type="email"
             id="username"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter username or email address"
+            placeholder="Email address"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required

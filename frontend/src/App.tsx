@@ -8,6 +8,8 @@ import Register from "./pages/Register";
 import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 // import Location from "./pages/Location";
+import Login from "./pages/Admin/Login";
+import AdminDashboard from "./pages/Admin/Dashboard";
 
 function App() {
   return (
@@ -20,8 +22,9 @@ function App() {
         <Route path="/service" element={<OurServicesPage />} />
         <Route path="/contactus" element={<ContactUs/>} />
         <Route path="/LogIn" element={<LogIn />} />
-        <Route path="/Register" element={<Register />} />
-
+        <Route path="/Register" element={<Register />}/>
+        <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+        <Route path="/admin/login" element={<Login/>}/>
       </Routes>
       <Toaster />
     </div>

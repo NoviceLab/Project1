@@ -40,7 +40,7 @@ function Register() {
           toast.success("User created")
           const token = response.data.jwt
           localStorage.setItem("token",token);
-          const user = response.data.user
+          const user = response.data.name
           localStorage.setItem("user",user)
           navigate("/dashboard");
         }
