@@ -18,13 +18,16 @@ function LogIn() {
       const response = await axios.post("http://localhost:3000/api/v1/auth/login",data);
       const msg = response.data.msg;
       if(msg == "Invalid Inputs"){
-        toast.error("Password must be min. 8 letters")
+        toast.error("Password must be min. 8 letters");
+        return;
       }
       if(msg == "User not found with this email"){
-        toast.error("No User with this email Found")
+        toast.error("No User with this email Found");
+        return;
       }
       if(msg == "Invalid password"){
         toast.error("Wrong password!");
+        return;
       }
       if(msg == "user signed in"){
         toast.success("User logged in");
