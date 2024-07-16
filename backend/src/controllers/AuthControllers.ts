@@ -8,7 +8,7 @@ export const login = async (req: Request, res: Response) => {
   const validate = await loginInputs.safeParse(body); // validating user inputs
   try {
     if (!validate.success) {
-      // if inputs arer invalid
+      // if inputs are invalid
       res.json({
         msg: "Invalid Inputs",
       });
@@ -24,9 +24,8 @@ export const login = async (req: Request, res: Response) => {
         res.status(200).json({
           msg: "user signed in",
           jwt: token,
+          user: user.name
         });
-        localStorage.setItem("Token", token); // saving jwt in localstorage
-        localStorage.setItem("user", user.name);
       } else {
         return res.json({
           msg: "Invalid password",
@@ -40,6 +39,3 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
-export const logout = async (req: Request, res: Response) => {
-  localStorage.clear();
-};

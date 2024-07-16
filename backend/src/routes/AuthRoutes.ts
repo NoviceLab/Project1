@@ -1,10 +1,8 @@
 import { Router } from "express";
-import { protect } from "../middlewares/authMiddleware";
-import { login,logout } from "../controllers/AuthControllers";
+import { login } from "../controllers/AuthControllers";
 
 const router = Router()
 
-router.post("/login",protect,login);
-router.post("/logout",logout);
+router.post("/login",login);
 
 export default router
