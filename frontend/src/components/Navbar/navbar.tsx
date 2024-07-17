@@ -601,19 +601,19 @@ const Navbar = () => {
                     : "opacity-0 invisible"
                 }`}
               >
-                <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                   <button
                     onClick={() => navigate("/603-Lodha-Supremus-Center")}
                   >
                     603 Lodha Supremus Center (Thane)
                   </button>
                 </li>
-                <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                   <button onClick={() => navigate("/Naman-Midtown-Center")}>
                     Naman Midtown Center (Dadar)
                   </button>
                 </li>
-                <li className="py-2 hover:text-yellow-500 border-b border-transparent">
+                <li className="py-2 hover:text-yellow-500 border-2 border-transparent">
                   <button onClick={() => navigate("/603-MBC-Center")}>
                     603 MBC Center (Thane)
                   </button>
