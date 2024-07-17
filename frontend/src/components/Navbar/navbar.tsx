@@ -400,59 +400,59 @@ const Navbar = () => {
                         : "opacity-0 invisible"
                     }`}
                   >
-                    <li className="py-2  hover:text-yellow-500 border-transparent border-b border-gray-400">
+                    <li className="py-2  hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Matulya-Centre")}
                       >
                         Matulya Centre, Lower Parel
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button onClick={() => navigate("/locations/Marathon")}>
                         Marathon, Lower Parel
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Sun-Mill-Compound")}
                       >
                         Sun Mill Compound, Lower Parel
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Kamala-Mills")}
                       >
                         Kamala Mills, Lower Parel
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Sunshine-Tower")}
                       >
                         Sunshine Tower, Lower Parel
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Amore-Centre")}
                       >
                         Amore Centre, Khar
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button
                         onClick={() => navigate("/locations/Makhija-Archade")}
                       >
                         Makhija Archade, Bandra
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400 border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-b border-gray-400">
                       <button onClick={() => navigate("/locations/MIDC")}>
                         MIDC, Andheri
                       </button>
                     </li>
-                    <li className="py-2 hover:text-yellow-500 border-2         border-transparent">
+                    <li className="py-2 hover:text-yellow-500 border-2 border-transparent">
                       <button
                         onClick={() =>
                           navigate("/locations/Pinnacle-Corporate-Park")
