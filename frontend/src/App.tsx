@@ -32,7 +32,7 @@ function App() {
         <Route path="/admin/userinfo/:user" element={<Userdata/>}/>
         <Route path="/admin/alluserinfo" element={<UserManagement/>} />
         <Route path="/admin/createacc" element={<CreateUser/>}/>
-        <Route path="/admin/edituser" element={<EditUser />}/>
+        <Route path="/admin/edituser/:id" element={<EditUser />}/>
       </Routes>
       <Toaster />
     </div>

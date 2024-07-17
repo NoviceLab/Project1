@@ -8,8 +8,8 @@ const router = Router()
 router.post("/",createuser);
 router.get("/",protect,getusers);
 router.get("/:id",protect,userbyid);
-router.delete("/:id",protect,admin,deleteuser);
-router.put("/:id",protect,admin,updateuser);
+router.delete("/:id",protect,deleteuser);
+router.put("/:id",protect,updateuser);
 router.get("/details/dashboard",protect,noofuser);
 
 export default router 
