@@ -11,6 +11,12 @@ export default {
         customYellow: "#fff9c9",
         customGray: '#817a78'
       },
+      width: {
+        '1524': '1524px',
+      },
+      height: {
+        '810': '810px',
+      },
     },
   },
 

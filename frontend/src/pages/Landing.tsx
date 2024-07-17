@@ -25,12 +25,14 @@ import Review from "../components/Landing/Review";
 import Random from "../components/Landing/Random";
 import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
+import "../utils/Landing/custom.css";
 
 function Landing() {
+
   return (
     <div className="h-screen w-screen">
       <div><Navbar /></div>
-      <div className="flex flex-col h-[60%] md:h-[73%] lg:h-[83%] justify-center bg-black">
+      <div className="flex flex-col md:h-[73%] lg:h-[83%] justify-center  w-1524 p-40 bg-image" style={{height:810}}>
         <h1 className="border-l-2 border-yellow-400 text-white pl-3 m-6">
           <span className="flex flex-row">
             <div className="pb-2 pr-2">
@@ -54,10 +56,10 @@ function Landing() {
           Be surrounded by inspiration
         </h1>
         <div className="ml-9">
-          <button className="bg-yellow-400 border-l-4 hover:bg-yellow-500 hover:border-l-2 m-2 py-2 px-4 text-white md:text-2xl font-sans font-bold">
+          <button className="bg-yellow-400 border-l-2 hover:bg-yellow-500 hover:border-l-2 m-2 py-2 px-4 text-white md:text-2xl font-sans font-bold">
             Book a Space
           </button>
-        </div>
+          </div>
       </div>
       <div className="flex flex-col md:flex-row py-2">
         <div className="w-screen md:w-[60%] px-6">
@@ -138,7 +140,7 @@ function Landing() {
             <h1 className="text-2xl font-Convergence font-semibold">
               Space to make your greatest impact.
             </h1>
-            <p className="text-xl text-slate-500 font-Raleway mt-3 mr-3">
+            <p className="text-xl text-slate-500 f  ont-Raleway mt-3 mr-3">
               If you need space today, you need a huge range of options that can
               be reserved simply and efficiently. If you need to offer flexible
               work benefits to all your team members, you need our simple
