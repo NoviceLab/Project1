@@ -10,6 +10,9 @@ import Dashboard from "./pages/Dashboard";
 // import Location from "./pages/Location";
 import Login from "./pages/Admin/Login";
 import AdminDashboard from "./pages/Admin/Dashboard";
+import Userdata from "./pages/Admin/Userdata";
+import CreateUser from "./pages/Admin/Createuser";
+import UserManagement from "./pages/Admin/Alluser";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
         <Route path="/Register" element={<Register />}/>
         <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
         <Route path="/admin/login" element={<Login/>}/>
+        <Route path="/admin/userinfo/:user" element={<Userdata/>}/>
+        <Route path="/admin/alluserinfo" element={<UserManagement/>} />
+        <Route path="/admin/createacc" element={<CreateUser/>}/>
       </Routes>
       <Toaster />
     </div>

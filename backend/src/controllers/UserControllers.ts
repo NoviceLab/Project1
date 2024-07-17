@@ -1,5 +1,6 @@
 import { Request,Response } from "express";
 import { UserModel } from "../models/user.model";
+import { SpaceModel } from "../models/space.model";
 import { createuserInputs } from "../zodTypes/types";
 import { kycmodel } from "../models/kyc.model";
 import jwt from "jsonwebtoken";
@@ -123,6 +124,28 @@ export const updateuser = async(req:Request,res:Response)=>{
     res.json({
         msg: error
     })  
+    }
+}
+
+export const noofuser = async(req:Request,res:Response)=>{
+    try {
+        const totalusers = await UserModel.countDocuments({role: "user"});
+        const totalverifiedusers =  await UserModel.countDocuments({role: "user",kyc: "true"});
+        const pendingkycrequest = await UserModel.countDocuments({role: "user",kyc: "pending"});
+        const totalworkspace = await SpaceModel.countDocuments();
+        const users = await UserModel.find().sort({createdAt: 1}).limit(5);
+        return res.json({
+            msg: "details",
+            totalusers: totalusers,
+            verifiedusers: totalverifiedusers,
+            pendingkyc: pendingkycrequest,
+            totalworkspaces: totalworkspace,
+            users: users
+        });
+    } catch (error) {
+        res.json({
+            msg: error
+        });
     }
 }
 
