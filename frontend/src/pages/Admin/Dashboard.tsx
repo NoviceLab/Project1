@@ -60,7 +60,7 @@ function AdminDashboard() {
       </div>
       <div className="w-full flex justify-around p-2 font-medium text-slate-500">
       <div className="cursor-pointer" onClick={()=>{navigate("/admin/createacc")}}><h1>Create Users</h1></div>
-        <div>Edit User</div>
+      <div className="cursor-pointer" onClick={()=>{navigate("/admin/edituser")}}><h1>Edit Users</h1></div>
         <div className="flex items-center bg-white rounded-full px-2"><input type="text" placeholder="Search User" value={user} className="outline-none px-1 font-normal" onChange={(e)=>{setUser(e.target.value)}} /><div className="cursor-pointer" onClick={()=>{navigate(`/admin/userinfo/${user}`)}}><CiSearch/></div></div>
         <div>kyc Request</div>
         <div className="cursor-pointer" onClick={()=>{navigate("/admin/alluserinfo")}}><h1>All Users</h1></div>
