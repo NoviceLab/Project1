@@ -114,6 +114,7 @@ export const updateuser = async(req:Request,res:Response)=>{
             name: body.name,
             email: body.email,
             password: body.password,
+            role: body.role,
             phone: body.phone,
             coins: parseInt(body.coins),
         })

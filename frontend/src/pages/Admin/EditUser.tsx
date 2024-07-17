@@ -1,24 +1,58 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+import { useParams } from 'react-router-dom';
 
 const EditUser: React.FC = () => {
+    const {id} = useParams()
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
     const [role, setRole] = useState('user');
-    const [kyc, setKyc] = useState('false');
     const [coins, setCoins] = useState(0);
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    async function fetchinfo() {
+        const response = await axios.get(`http://localhost:3000/api/v1/users/${id}`,{
+            headers:{
+                Authorization: localStorage.getItem("token")
+            }
+        })
+        const msg = response.data.msg;
+        setCoins(msg.coins);
+        setEmail(msg.email);
+        setRole(msg.role)
+        setPhone(msg.phone);
+        setName(msg.name);
+    }
+
+    useEffect(()=>{
+      fetchinfo();  
+    },[]);
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log('Form submitted:', { name, email, password, phone, role, kyc, coins });
-        // Here you can perform additional actions like API calls to create the user
+        const data = {
+            name: name,
+            coins: coins,
+            email: email,
+            role: role,
+            phone: phone,
+        }
+        const response = await axios.put(`http://localhost:3000/api/v1/users/${id}`,data,{
+            headers:{
+                Authorization: localStorage.getItem("token")
+            }
+        })
+        if(response.data.msg == "User updated"){
+            toast.success("User updated");
+        }else{
+            toast.error("Some error occoured");
+        }
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen">
-            <div className="w-full max-w-md">
-                <form onSubmit={handleSubmit} className="max-w-xl mx-auto mt-10 space-y-4 bg-white p-10 rounded shadow-lg">
+        <div className="h-screen w-screen flex items-center justify-center">
+            <form onSubmit={handleSubmit} className="">
                     <div className="flex flex-col">
                         <label htmlFor="name" className="mb-2 font-semibold text-gray-700">Name:</label>
                         <input
@@ -37,17 +71,6 @@ const EditUser: React.FC = () => {
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            required
-                            className="border-2 border-gray-200 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="password" className="mb-2 font-semibold text-gray-700">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
                             required
                             className="border-2 border-gray-200 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
@@ -75,18 +98,6 @@ const EditUser: React.FC = () => {
                         </select>
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="kyc" className="mb-2 font-semibold text-gray-700">KYC:</label>
-                        <select
-                            id="kyc"
-                            value={kyc}
-                            onChange={(e) => setKyc(e.target.value)}
-                            className="border-2 border-gray-200 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        >
-                            <option value="false">False</option>
-                            <option value="true">True</option>
-                        </select>
-                    </div>
-                    <div className="flex flex-col">
                         <label htmlFor="coins" className="mb-2 font-semibold text-gray-700">Coins:</label>
                         <input
                             type="number"
@@ -96,9 +107,8 @@ const EditUser: React.FC = () => {
                             className="border-2 border-gray-200 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
-                    <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Create User</button>
+                    <button type="submit" className="bg-blue-500 mt-6 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Save Changes</button>
                 </form>
-            </div>
         </div>
     );
 }
