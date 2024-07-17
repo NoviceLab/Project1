@@ -12,6 +12,7 @@ import Login from "./pages/Admin/Login";
 import AdminDashboard from "./pages/Admin/Dashboard";
 import Userdata from "./pages/Admin/Userdata";
 import CreateUser from "./pages/Admin/Createuser";
+import EditUser from "./pages/Admin/EditUser";
 import UserManagement from "./pages/Admin/Alluser";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/admin/userinfo/:user" element={<Userdata/>}/>
         <Route path="/admin/alluserinfo" element={<UserManagement/>} />
         <Route path="/admin/createacc" element={<CreateUser/>}/>
+        <Route path="/admin/edituser" element={<EditUser />}/>
       </Routes>
       <Toaster />
     </div>
