@@ -330,7 +330,7 @@ const Navbar = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate("/contact")}>Contact Us</button>{" "}
+              <button onClick={() => navigate("/contactus")}>Contact Us</button>
               </li>
             </ul>
           </div>
@@ -626,7 +626,7 @@ const Navbar = () => {
               </button>
             </li>
             <li>
-              <button onClick={() => navigate("/contact")}>Contact Us</button>
+              <button onClick={() => navigate("/contactus")}>Contact Us</button>
             </li>
           </ul>
         </div>
