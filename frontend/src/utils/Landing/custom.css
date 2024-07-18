@@ -14,3 +14,10 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.bg-image2{
+  background-image: url('https://www.603thecoworkingspace.com/wp-content/uploads/2020/03/bg-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
