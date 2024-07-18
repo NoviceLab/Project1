@@ -28,10 +28,11 @@ import Footer from "../components/Footer/footer";
 import "../utils/Landing/custom.css";
 
 function Landing() {
-
   return (
     <div className="h-screen w-screen">
-      <div><Navbar /></div>
+      <div>
+        <Navbar />
+      </div>
       <div className="flex md:h-[73%] lg:h-[83%] xl:h-[95%] items-center justify-between pt-40 pb-40 pr-10 pl-20 bg-image">
         <div>
           <h1 className="border-l-2 border-yellow-400 text-white pl-3 m-6">
@@ -63,15 +64,9 @@ function Landing() {
           </div>
         </div>
         <div className="flex flex-col space-y-20 text-yellow-400">
-          <div>
-            a
-          </div>
-          <div>
-            a
-          </div>
-          <div>
-            a
-          </div>
+          <div>a</div>
+          <div>a</div>
+          <div>a</div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row ">
@@ -235,6 +230,29 @@ function Landing() {
           </div>
         </div>
       </div>
+      <div
+        className="items-center justify-between pt-40 pb-40 pr-10 pl-20 bg-image2 w-1524"
+        style={{ height: 800 }}
+      >
+        <div>
+              <div className="text-center text-lg leading-10 text-yellow-500">
+                <span>Join the Coworking Movement</span>
+              </div>
+
+              <h2 className="text-center text-6xl leading-none px-40 py-10 text-white font-montserrat tracking-tighter overflow: auto or overflow: scroll">
+                <span>
+                  Spaces that are occupied by Corporates and Start ups, designed
+                  with your business&nbsp;in&nbsp;mind
+                </span>
+              </h2>
+
+              <div className="ml-9 flex justify-center items-center">
+                <button className="bg-yellow-400 border-l-2 hover:bg-white hover:border-l-2 m-2 py-2 px-4 md:text-2xl font-sans font-Raleway">
+                  Book a Space
+                </button>
+              </div>
+        </div>
+      </div>
       <div className="w-full flex flex-col mt-6 xl:flex-row">
         <div className="w-full xl:w-1/2 flex justify-center items-center">
           <div className="ml-16 mr-8">
@@ -355,7 +373,7 @@ function Landing() {
           balance.
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
