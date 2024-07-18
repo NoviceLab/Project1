@@ -1,5 +1,4 @@
 import {
-  bgimage,
   lifeat603,
   mission,
   bgimage2,
@@ -8,17 +7,15 @@ import OurServices from "../components/AboutUs/OurServices";
 import GreyLine from "../components/AboutUs/GreyLine";
 import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
+import '../utils/AboutUs/custom.css'
+
 function AboutUs() {
   return (
     <div className="w-screen h-screen">
       <div>
         <Navbar />
       </div>
-      <div className="relative flex justify-center items-center">
-        <img
-          className="h-[580px] w-full object-cover object-center"
-          src={bgimage}
-        />
+      <div className=" flex justify-center items-center background-image w-1524" style={{height:600}}>
         <div className="absolute">
           <h2 className="text-center font-Raleway font-extrabold text-white text-[56px]">
             About Us
