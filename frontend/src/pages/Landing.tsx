@@ -32,42 +32,55 @@ function Landing() {
   return (
     <div className="h-screen w-screen">
       <div><Navbar /></div>
-      <div className="flex flex-col md:h-[73%] lg:h-[83%] justify-center  w-1524 p-40 bg-image" style={{height:810}}>
-        <h1 className="border-l-2 border-yellow-400 text-white pl-3 m-6">
-          <span className="flex flex-row">
-            <div className="pb-2 pr-2">
-              <img src={logo} className="w-[50px] h-[40px]" />
-            </div>
-            <div>
-              <Popuptext />
-            </div>
-          </span>
-          <span>
-            <Scramble totype="Work" />
-          </span>
-          <span>
-            <Scramble totype="better," />
-          </span>
-          <span>
-            <Scramble totype="together" />
-          </span>
-        </h1>
-        <h1 className=" ml-9 text-white md:text-2xl">
-          Be surrounded by inspiration
-        </h1>
-        <div className="ml-9">
-          <button className="bg-yellow-400 border-l-2 hover:bg-yellow-500 hover:border-l-2 m-2 py-2 px-4 text-white md:text-2xl font-sans font-bold">
-            Book a Space
-          </button>
+      <div className="flex md:h-[73%] lg:h-[83%] xl:h-[95%] items-center justify-between pt-40 pb-40 pr-10 pl-20 bg-image">
+        <div>
+          <h1 className="border-l-2 border-yellow-400 text-white pl-3 m-6">
+            <span className="flex flex-row">
+              <div className="pb-2 pr-2">
+                <img src={logo} className="w-[50px] h-[40px]" />
+              </div>
+              <div>
+                <Popuptext />
+              </div>
+            </span>
+            <span>
+              <Scramble totype="Work" />
+            </span>
+            <span>
+              <Scramble totype="better," />
+            </span>
+            <span>
+              <Scramble totype="together" />
+            </span>
+          </h1>
+          <h1 className=" ml-9 text-white md:text-2xl">
+            Be surrounded by inspiration
+          </h1>
+          <div className="ml-9">
+            <button className="bg-yellow-400 border-l-2 hover:bg-yellow-500 hover:border-l-2 m-2 py-2 px-4 text-white md:text-2xl font-sans font-bold">
+              Book a Space
+            </button>
           </div>
+        </div>
+        <div className="flex flex-col space-y-20 text-yellow-400">
+          <div>
+            a
+          </div>
+          <div>
+            a
+          </div>
+          <div>
+            a
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col md:flex-row py-2">
-        <div className="w-screen md:w-[60%] px-6">
-          <h1 className="px-4 py-2 text-3xl md:text-4xl font-Raleway font-bold">
+      <div className="flex flex-col md:flex-row ">
+        <div className="w-screen md:w-[60%] px-6 mt-10">
+          <h1 className="px-4 py-2 text-3xl md:text-4xl xl:text-5xl mx-10 font-Raleway font-bold">
             Best working environment that suits your business needs, customized
             solutions and more.
           </h1>
-          <h1 className="px-4 py-2 text-lg md:text-2xl text-slate-400">
+          <h1 className="px-4 py-2 mt-6 text-lg md:text-xl mx-10 text-slate-400">
             Elevate your work experience with 603 The Coworking Space. Whether
             you're looking for a creative hub, a place to meet clients, or a
             supportive community, we have it all. Join us and unlock your full
@@ -76,7 +89,7 @@ function Landing() {
           </h1>
         </div>
         <div className="w-screen md:w-[40%] flex flex-col p-2 md:p-0">
-          <div className="bg-yellow-400 p-2 flex justify-around md:w-[80%]">
+          <div className="bg-yellow-400 p-2 py-8 flex justify-around md:w-[80%]">
             <div className=" h-[85px] w-[79px] text-white">
               <Twopeoplesitting />
             </div>
@@ -131,33 +144,33 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row mt-28">
         <div className="w-full md:w-1/2">
           <div className="flex flex-col justify-center items-center py-3">
             <img src={office_pic} alt="" className="h-[80%] w-[80%]" />
           </div>
           <div className="ml-6 py-4">
-            <h1 className="text-2xl font-Convergence font-semibold">
+            <h1 className="text-xl font-Convergence font-semibold mx-10">
               Space to make your greatest impact.
             </h1>
-            <p className="text-xl text-slate-500 f  ont-Raleway mt-3 mr-3">
+            <p className="text-lg font-medium text-slate-500 mx-10 font-Raleway mt-3 mr-3">
               If you need space today, you need a huge range of options that can
               be reserved simply and efficiently. If you need to offer flexible
               work benefits to all your team members, you need our simple
               solution for teams of any size.
             </p>
-            <button className="my-6 p-3 md:p-4 bg-yellow-400 border-l-2 border-black hover:font-medium font-Raleway">
+            <button className="my-6 mx-10 p-3 md:p-4 bg-yellow-400 border-l-2 border-black hover:font-medium font-Raleway">
               Explore Our Managed Office Solutions
             </button>
           </div>
         </div>
         <div className="w-full md:w-1/2">
           <div className="ml-6 mr-4">
-            <h1 className="text-gray-950 text-2xl font-bold md:text-4xl">
+            <h1 className="text-gray-950 text-3xl font-bold md:text-4xl">
               Our Locations
             </h1>
             <br />
-            <p className="text-slate-500 text-xl">
+            <p className="text-slate-500 text-lg mr-20">
               Experience the epitome of workspace excellence with 603, the
               leading coworking space. Our thoughtfully curated collection of
               premium locations provides a distinguished environment for
@@ -184,7 +197,7 @@ function Landing() {
             </div>
           </div>
           <div className="ml-6 mr-4 my-6">
-            <p className="text-slate-500 text-xl">
+            <p className="text-slate-500 text-lg mr-20">
               Give your team access to thousands of workspace options over
               India, so they can meet, collaborate, and get their best work
               done.
@@ -224,15 +237,15 @@ function Landing() {
       </div>
       <div className="w-full flex flex-col mt-6 xl:flex-row">
         <div className="w-full xl:w-1/2 flex justify-center items-center">
-          <div>
-            <h1 className="font-Convergence italic text-yellow-400 font-bold mr-4 ml-6 shadow-black shadow-md text-2xl md:text-3xl">
+          <div className="ml-16 mr-8">
+            <h1 className="font-Convergence italic text-yellow-400 font-bold mr-4 ml-6 shadow-black shadow-md text-2xl">
               DID YOU KNOW?
             </h1>
-            <h1 className="text-2xl md:text-3xl text-black font-Convergence font-semibold mr-4 ml-6 mt-4">
+            <h1 className="text-2xl text-black font-sans font-semibold mr-4 ml-6 mt-4">
               we are now offering our expertise for managed offices to your
               offices of all sizes?
             </h1>
-            <p className="text-slate-500 mr-4 ml-6 mt-4 md:text-xl">
+            <p className="text-slate-500 mr-4 ml-6 mt-8 md:text-lg">
               Standalone workspaces designed and built for your brand, and
               tailored to your needs. Offices, meeting rooms and co-working
               access for your team ‑ by the year, month, day or hour
@@ -299,8 +312,8 @@ function Landing() {
       </div>
       <Random />
       <Yellowline />
-      <div className="w-full">
-        <div className="text-slate-400 ml-2 mr-2 md:ml-6 md:mr-4">
+      <div className="w-full mb-16">
+        <div className="text-slate-400 mx-4 md:mx-20">
           The Rise of Coworking: Unveiling Vibrant Office Spaces in Mumbai &
           Thane. In the dynamic business landscape of Mumbai and Thane,
           traditional office spaces are making way for a revolutionary
@@ -342,7 +355,7 @@ function Landing() {
           balance.
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

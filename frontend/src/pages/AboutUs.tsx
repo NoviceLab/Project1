@@ -2,6 +2,7 @@ import {
   lifeat603,
   mission,
   bgimage2,
+  vision
 } from "../utils/AboutUs/AboutUs";
 import OurServices from "../components/AboutUs/OurServices";
 import GreyLine from "../components/AboutUs/GreyLine";
@@ -30,7 +31,7 @@ function AboutUs() {
           <h1 className="text-center text-[42px] font-bold text-[#fcc519]">
             Who We Are
           </h1>
-          <p className="text-center text-[#817a78] text-[16px] md:text-[18px] md:font-light xl:mx-24 mt-4">
+          <p className="text-center text-[#817a78] text-[16px] md:text-[18px] md:font-light xl:mx-32 mt-4">
             603 is a Mumbai based coworking space with a total of 8 centres, 7
             in Mumbai itself and 1 in Bangalore. 603 as a number defines “Your
             Infinite Existence” and thus we, from our company, aim to provide a
@@ -93,7 +94,7 @@ function AboutUs() {
       </div>
       <div className="flex w-full flex-col-reverse md:flex-row mt-16">
         <div className="w-full md:w-1/2">
-          <img src={mission} />
+          <img src={vision} />
         </div>
         <div className="w-full md:w-1/2">
           <div className="bg-[#faf6c9] rounded-3xl p-3 m-3 md:mx-12 xl:ml-20 my-6">
@@ -156,7 +157,7 @@ function AboutUs() {
       <OurServices />
       <GreyLine />
       <div className="w-full">
-        <div className="text-slate-400 ml-2 mr-2 md:ml-6 xl:ml-12 xl:mr-8 md:mr-4">
+        <div className="text-slate-400 ml-2 mr-2 md:ml-6 xl:ml-24 xl:mr-20 md:mr-4">
           <p>
             Embracing Affordability: The Charm of Budget-Friendly Coworking
             Spaces in Mumbai and Thane.
@@ -206,7 +207,9 @@ function AboutUs() {
           </p>
         </div>
       </div>
-      <Footer />
+      <div className="mt-12">
+        <Footer />
+      </div>
     </div>
   );
 }
