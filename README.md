@@ -22,9 +22,6 @@
 - **Images:** If you want to use any images, first create a TypeScript file in the `utils` folder with the name of your page. Export the images from there and use them in your project.
 - **Icons:** React Icons library has been installed. Visit their [site](https://react-icons.github.io/react-icons/) for the names of the icons.
 
-### Navbar and Footer
-- The person assigned to the login page will handle the Navbar and Footer.
-
 ## Responsiveness
 - All frontend components must be responsive.
 
@@ -35,7 +32,6 @@
 - mail verification
 - Notification
 - Payment Gateway
-- Zoho integration
 
 ### User Dashboard
 
