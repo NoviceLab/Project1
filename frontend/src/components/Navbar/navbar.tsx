@@ -325,7 +325,7 @@ const Navbar = () => {
                 </ul>
               </li>
               <li>
-                <button onClick={() => navigate("/partner")}>
+                <button onClick={() => navigate("/partner-with-us")}>
                   Partner with us
                 </button>
               </li>
@@ -621,7 +621,7 @@ const Navbar = () => {
               </ul>
             </li>
             <li>
-              <button onClick={() => navigate("/partner")}>
+              <button onClick={() => navigate("/partner-with-us")}>
                 Partner with us
               </button>
             </li>
