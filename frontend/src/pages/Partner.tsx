@@ -1,9 +1,21 @@
-import React from 'react'
+import Footer from "../components/Footer/footer";
+import Navbar from "../components/Navbar/navbar";
+import PartnerWithUs from "../components/Partner/PartnerWithUs";
 
 const Partner = () => {
   return (
-    <div>Partner</div>
-  )
-}
+    <>
+      <div className="h-screen w-screen">
+        <div>
+          <Navbar />
+        </div>
+        <PartnerWithUs />
+      <div>
+        <Footer />
+      </div>
+      </div>
+    </>
+  );
+};
 
-export default Partner
+export default Partner;
