@@ -7,13 +7,13 @@ import LogIn from "./pages/LogIn";
 import Register from "./pages/Register";
 import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
-// import Location from "./pages/Location";
 import Login from "./pages/Admin/Login";
 import AdminDashboard from "./pages/Admin/Dashboard";
 import Userdata from "./pages/Admin/Userdata";
 import CreateUser from "./pages/Admin/Createuser";
 import EditUser from "./pages/Admin/EditUser";
 import UserManagement from "./pages/Admin/Alluser";
+import Partner from "./pages/Partner";
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about-us" element={<AboutUs />} />
-        {/* <Route path="/location" element={<Location />} /> */}
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/service" element={<OurServicesPage />} />
         <Route path="/contactus" element={<ContactUs/>} />
@@ -33,6 +32,7 @@ function App() {
         <Route path="/admin/alluserinfo" element={<UserManagement/>} />
         <Route path="/admin/createacc" element={<CreateUser/>}/>
         <Route path="/admin/edituser/:id" element={<EditUser />}/>
+        <Route path="/partner-with-us" element={<Partner/>}/>
       </Routes>
       <Toaster />
     </div>
